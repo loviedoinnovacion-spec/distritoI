@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura Organizacional - Centro de Innovación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FAFBFC;
+            color: #2D3748;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #0A2540;
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            background: white;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: #0A2540;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #00D4AA;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .org-visual {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #F8FAFC;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .org-box {
+            background: white;
+            border: 2px solid #0A2540;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 0.5rem auto;
+            max-width: fit-content;
+        }
+
+        .org-box.governance {
+            background: #0A2540;
+            color: white;
+        }
+
+        .org-box.management {
+            background: #1E3A5F;
+            color: white;
+        }
+
+        .org-box.pmo {
+            background: #00D4AA;
+            color: #0A2540;
+            border-style: dashed;
+        }
+
+        .org-box.operational {
+            border-color: #4ECDC4;
+        }
+
+        .org-line {
+            width: 2px;
+            height: 30px;
+            background: #CBD5E0;
+            margin: 0 auto;
+        }
+
+        .org-row {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .org-h-line {
+            height: 2px;
+            background: #CBD5E0;
+            margin: 1rem auto;
+            width: 60%;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        th {
+            background: #0A2540;
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        tr:nth-child(even) {
+            background: #F8FAFC;
+        }
+
+        .note {
+            background: #F0FDFA;
+            border-left: 4px solid #00D4AA;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .evolution {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .evolution-box {
+            background: white;
+            border: 2px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .evolution-box h3 {
+            color: #0A2540;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .evolution-box.active {
+            border-color: #00D4AA;
+            background: #F0FDFA;
+        }
+
+        @media (max-width: 768px) {
+            .org-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .evolution {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Estructura Organizacional del Centro de Innovación</h1>
+
+        <!-- ORGANIGRAMA BASE -->
+        <div class="section">
+            <h2>Organigrama Formal</h2>
+            
+            <p>La estructura institucional aprobada se mantiene:</p>
+
+            <div class="org-visual">
+                <div class="org-box governance">Consorcio</div>
+                <div class="org-line"></div>
+                <div class="org-box governance">Consejo Directivo</div>
+                <div class="org-line"></div>
+                <div class="org-box management">Dirección Ejecutiva</div>
+                <div class="org-line"></div>
+                
+                <div style="display: flex; gap: 2rem; justify-content: center; align-items: flex-start; margin-top: 1rem;">
+                    <div style="flex: 0 0 220px;">
+                        <div class="org-box pmo">
+                            Unidad de<br>Coordinación
+                        </div>
+                        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: #64748B;">
+                            Órgano de staff<br>Funciona como PMO
+                        </p>
+                    </div>
+                    
+                    <div style="flex: 1;">
+                        <div class="org-h-line"></div>
+                        <div class="org-row">
+                            <div class="org-box operational">
+                                Operaciones y<br>Administración
+                            </div>
+                            <div class="org-box operational">
+                                Programas e<br>Innovación
+                            </div>
+                            <div class="org-box operational">
+                                Talento y<br>Formación
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul>
+                <li><strong>Consorcio:</strong> Administración del activo físico</li>
+                <li><strong>Consejo Directivo:</strong> Supervisión estratégica</li>
+                <li><strong>Dirección Ejecutiva:</strong> Conducción operativa</li>
+                <li><strong>Unidad de Coordinación:</strong> Órgano de staff, opera como PMO</li>
+                <li><strong>Tres Gerencias:</strong> Áreas funcionales base</li>
+            </ul>
+        </div>
+
+        <!-- UNIDAD DE COORDINACIÓN -->
+        <div class="section">
+            <h2>Unidad de Coordinación / PMO</h2>
+
+            <p>Es un órgano de staff que coordina las misiones estratégicas del Centro.</p>
+
+            <table>
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>Gestión de misiones</td>
+                    <td>Coordina las misiones estratégicas en ejecución</td>
+                </tr>
+                <tr>
+                    <td>Seguimiento</td>
+                    <td>Mantiene dashboard de progreso y KPIs</td>
+                </tr>
+                <tr>
+                    <td>Coordinación</td>
+                    <td>Facilita trabajo entre gerencias</td>
+                </tr>
+                <tr>
+                    <td>Reporting</td>
+                    <td>Reporta a Dirección Ejecutiva</td>
+                </tr>
+            </table>
+
+            <p><strong>Composición:</strong></p>
+            <ul>
+                <li>Inicio: 1 Coordinador PMO</li>
+                <li>Expansión: 2-3 personas</li>
+                <li>Madurez: 3-4 personas</li>
+            </ul>
+        </div>
+
+        <!-- MODELO DE TRABAJO -->
+        <div class="section">
+            <h2>Modelo de Trabajo Matricial</h2>
+
+            <p>El Centro opera con modelo matricial. Las personas trabajan para su gerencia de origen y para las misiones estratégicas según la asignación definida.</p>
+
+            <p>Cada misión tiene un líder responsable que coordina un equipo con personas de distintas gerencias.</p>
+
+            <div class="note">
+                <strong>Ejemplo:</strong> La misión "Atracción de Empresas" tiene un líder y un equipo formado por personas de las gerencias de Operaciones, Programas y Talento.
+            </div>
+
+            <p><strong>Gobernanza:</strong></p>
+            <ul>
+                <li>Cada persona reporta a su gerente funcional y al líder de su misión</li>
+                <li>El PMO coordina entre gerencias y misiones</li>
+                <li>Los conflictos de prioridad se resuelven en Dirección Ejecutiva</li>
+            </ul>
+        </div>
+
+        <!-- EVOLUCIÓN -->
+        <div class="section">
+            <h2>Evolución de la Estructura</h2>
+
+            <p>La estructura organizacional se completa progresivamente según las misiones que se lanzan:</p>
+
+            <div class="evolution">
+                <div class="evolution-box active">
+                    <h3>Fase 1<br>0-6 meses</h3>
+                    <p style="font-size: 0.9rem; color: #64748B;">
+                        Estructura formal operativa<br>
+                        PMO activo<br>
+                        2 misiones piloto
+                    </p>
+                </div>
+
+                <div class="evolution-box">
+                    <h3>Fase 2<br>6-18 meses</h3>
+                    <p style="font-size: 0.9rem; color: #64748B;">
+                        Portfolio de 4-5 misiones<br>
+                        PMO expandido<br>
+                        Modelo matricial consolidado
+                    </p>
+                </div>
+
+                <div class="evolution-box">
+                    <h3>Fase 3<br>18-36 meses</h3>
+                    <p style="font-size: 0.9rem; color: #64748B;">
+                        5-6 misiones<br>
+                        Vínculos ecosistémicos<br>
+                        Estructura madura
+                    </p>
+                </div>
+            </div>
+
+            <div class="note">
+                La estructura se construye según las necesidades reales de las misiones, no se diseña completa al inicio.
+            </div>
+        </div>
+
+        <!-- IMPLEMENTACIÓN -->
+        <div class="section">
+            <h2>Implementación</h2>
+
+            <table>
+                <tr>
+                    <th>Momento</th>
+                    <th>Acción</th>
+                </tr>
+                <tr>
+                    <td>Mes 1</td>
+                    <td>Contratar Coordinador PMO<br>Seleccionar primeras misiones</td>
+                </tr>
+                <tr>
+                    <td>Mes 2</td>
+                    <td>Nombrar líderes de misión<br>Formar equipos<br>Lanzar misiones</td>
+                </tr>
+                <tr>
+                    <td>Mes 3</td>
+                    <td>Dashboard activo<br>Primeros reportes de progreso</td>
+                </tr>
+                <tr>
+                    <td>Mes 6</td>
+                    <td>Evaluación de resultados<br>Decisión sobre expansión</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- PRINCIPIOS -->
+        <div class="section">
+            <h2>Principios Organizacionales</h2>
+
+            <ul>
+                <li>La estructura formal es la base institucional aprobada</li>
+                <li>El PMO coordina desde el inicio</li>
+                <li>Las misiones definen la estructura operativa</li>
+                <li>La organización crece según las misiones que se lanzan</li>
+                <li>Las gerencias son la base estable</li>
+                <li>Las misiones son la capa dinámica</li>
+            </ul>
+        </div>
+
+        <!-- MODELO VISUAL -->
+        <div class="section">
+            <h2>Modelo Organizacional Visual</h2>
+            
+            <p>Diagrama completo del modelo organizacional implementado:</p>
+
+            <img src="/mnt/user-data/uploads/WhatsApp_Image_2026-05-23_at_6_59_12_PM.jpeg" 
+                 alt="Modelo Organizacional del Distrito I - Centro de Innovación" 
+                 style="width: 100%; max-width: 1200px; height: auto; margin: 2rem auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</body>
+</html>
